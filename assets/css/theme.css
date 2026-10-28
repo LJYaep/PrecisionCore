@@ -1,0 +1,129 @@
+/* PrecisionCore brand theme: gray / blue / white.
+   Loaded after styles.css; layout and HTML/CSS-only interactions are preserved. */
+:root {
+  --ink: #293342;
+  --muted: #566477;
+  --line: #d7e0ea;
+  --pale: #f0f5fb;
+  --paper: #ffffff;
+  --blue: #0873df;
+  --blue-dark: #0759ae;
+  --blue-light: #e9f3ff;
+  --gray-dark: #1c2635;
+  --gray-soft: #f4f6f8;
+}
+body { background: var(--paper); }
+.site-header {
+  background: var(--gray-dark);
+  border-bottom: 3px solid var(--blue);
+}
+.brand { flex-shrink: 0; line-height: 1; }
+.brand .brand-logo {
+  width: 270px;
+  height: 90px;
+  object-fit: contain;
+}
+.site-header nav a { color: #e8edf4; }
+.site-header nav a:hover,
+.site-header nav a:focus-visible { color: #ffffff; border-color: #258dff; }
+.social-links a { color: #eef3fa; border-color: #6e8199; }
+.social-links a:hover { background: var(--blue); border-color: var(--blue); }
+.eyebrow { color: var(--blue-dark); }
+.hero {
+  background: radial-gradient(ellipse at 82% 38%, #d9eaff 0%, transparent 52%),
+              linear-gradient(115deg, #f5f7fa 0%, #edf4fc 65%, #e6eff9 100%);
+}
+.hero h1 { color: #253447; }
+.hero-description { color: #4c5e73; }
+.hero-art { position: relative; }
+.hero-art .hero-emblem {
+  width: min(100%, 420px);
+  height: auto;
+  max-height: 440px;
+  object-fit: contain;
+  margin-inline: auto;
+  filter: drop-shadow(0 24px 32px #13589b20);
+}
+.hero-art figcaption { color: #325c85; font-weight: 600; }
+.button {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: #ffffff;
+  transition: background-color .18s ease, border-color .18s ease;
+}
+.button:hover { background: var(--blue-dark); border-color: var(--blue-dark); }
+.button-outline { color: var(--blue-dark); border-color: #91b7df; background: transparent; }
+.button-outline:hover { color: var(--blue-dark); background: #ffffff; border-color: var(--blue); }
+.text-link { color: var(--blue-dark); border-bottom-color: #8ab8e9; }
+.text-link:hover { color: var(--blue); }
+.slide-arrow { color: var(--blue-dark); border-color: #a9c5e3; background: #ffffffc9; }
+.slide-arrow:hover { background: #ffffff; border-color: var(--blue); }
+.slide-choice { border-color: #6486ab; background: #ffffff; }
+.slide-choice:checked { background: var(--blue); border-color: var(--blue); }
+.scroll-prompt { color: #355d87; }
+.scroll-prompt span { color: var(--blue); }
+.home-discover { background: #ffffff; }
+.application-grid article { border-top: 2px solid #bfdbfa; }
+.item-number { color: var(--blue-dark); font-weight: 700; }
+.purpose-card {
+  background: linear-gradient(145deg, #ffffff, #f0f5fa);
+  border-color: #d5e1ee;
+  border-top: 3px solid var(--blue);
+}
+.purpose-card h2 { color: #263f5b; }
+.team-section { border-top: 1px solid var(--line); padding-top: 42px; }
+.team-member h3 { color: #263e59; }
+.team-member .team-photo {
+  background: transparent;
+  border: 0;
+  outline: 3px solid #dceafe;
+  outline-offset: 6px;
+  border-radius: 50%;
+}
+.product-image { background: linear-gradient(135deg, #f2f6fb, #e5effb); border-color: #cddff1; }
+.product-card h2 { color: #254d78; }
+.service-section { border-top: 2px solid #d5e7fb; }
+.contact-information dt { color: var(--blue-dark); }
+.map-placeholder {
+  color: #3d6a98;
+  border-color: #c7d9ec;
+  background: repeating-linear-gradient(30deg, transparent, transparent 40px,
+    #d6e5f5 41px, #d6e5f5 42px), #eef4fb;
+}
+.map-placeholder svg { fill: #eef4fb; }
+input, select, textarea { background: #fbfcfe; border-color: #b9cadd; }
+input:focus, select:focus, textarea:focus { border-color: var(--blue); }
+:focus-visible { outline-color: var(--blue); }
+.form-notice { background: #f0f6ff; border-left-color: #76ace8; }
+.form-notice:target { background: #e7f2ff; border-color: var(--blue); }
+.site-footer { background: var(--gray-dark); border-top: 3px solid var(--blue); }
+.site-footer .footer-brand { display: inline-block; }
+.footer-brand img { width: 240px; height: 80px; object-fit: contain; }
+.site-footer p { color: #bbc7d6; }
+.site-footer nav a { color: #e5edf7; }
+.site-footer nav a:hover { color: #78b9ff; }
+.site-footer .footer-inner > div:first-child > p { margin-top: 0; }
+.placeholder-note { color: #62768c; }
+@media(max-width:1050px) {
+  .brand .brand-logo { width: 250px; height: 75px; }
+  .header-inner { padding-block: 8px 15px; }
+}
+@media(max-width:700px) {
+  .brand .brand-logo { width: 210px; height: 70px; }
+  .brand img { width: 210px; }
+  .header-inner { width: calc(100% - 32px); gap: 10px; padding-block: 8px 12px; }
+  .site-header nav a { font-size: 11px; }
+  .hero-art .hero-emblem { max-width: 210px; max-height: 210px; }
+  .footer-brand img { width: 220px; height: 73px; }
+  .application-grid article { padding-top: 22px; }
+}
+@media(max-width:360px) {
+  .brand .brand-logo { width: 180px; height: 60px; }
+  .social-links { gap: 5px; margin-left: auto; }
+}
+@media(prefers-reduced-motion:reduce) { .button { transition: none; } }
+@media print {
+  .site-header, .site-footer { background: #ffffff; }
+  .site-header nav a, .site-footer nav a, .site-footer p { color: #293342; }
+  .button { color: #000000; background: #ffffff; }
+}

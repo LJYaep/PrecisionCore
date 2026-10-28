@@ -13,7 +13,9 @@ Extract the ZIP, then open `precisioncore-website/index.html` in any modern brow
 - `products.html` — six component/application cards and reliability section.
 - `contact.html` — contact placeholders and a demo enquiry form.
 - `assets/css/styles.css` — shared responsive layout, carousel, form, mobile and print styles.
-- `assets/images/logo-mark.svg` — provisional editable chip logo.
+- `assets/images/precisioncore-logo.png` — supplied horizontal PrecisionCore logo, used in every header and footer.
+- `assets/images/precisioncore-emblem.png` — supplied blue microchip emblem, used on the homepage and as the favicon.
+- `assets/css/theme.css` — shared gray, blue, and white brand theme.
 - `assets/images/integrated-circuit.svg` — original component illustration.
 - `assets/images/sensor.svg` — original sensor illustration.
 - `assets/images/team-member-01-circle.svg` through `team-member-04-circle.svg` — circular portrait assets used on About Us.
@@ -23,7 +25,7 @@ Extract the ZIP, then open `precisioncore-website/index.html` in any modern brow
 
 ## Editing
 
-All four pages contain the same header and footer HTML. Update both in every HTML file to keep them consistent. Colours, spacing, and container width are defined as variables at the top of the stylesheet. Replace the provisional logo, team names and roles, contact details, and illustrations when final assets are available. Portraits use self-contained circular SVG image assets with transparent corners and embedded original photographs. The circle is clipped inside each SVG, independently of CSS. Original JPEG files are preserved.
+All four pages contain the same header and footer HTML. Update both in every HTML file to keep them consistent. Colours, spacing, and container width are defined as variables at the top of the stylesheet. Update team names and roles, contact details, and product illustrations when final assets are available. Portraits use self-contained circular SVG image assets with transparent corners and embedded original photographs. The circle is clipped inside each SVG, independently of CSS. Original JPEG files are preserved.
 
 The three social icons currently link to the LinkedIn, Facebook, and Instagram homepages. Replace their URLs with PrecisionCore's actual social profiles; their accessible labels identify them as placeholder links.
 
@@ -46,3 +48,7 @@ Vision: Help industries operate with greater precision, safety, and efficiency.
 Goal: Deliver durable components that minimize equipment failures and downtime.
 
 Product cards represent supplied component categories and application areas, not verified product models or technical specifications. No certification, performance, customer, or manufacturing claims have been added.
+
+## Brand theme
+
+The theme follows the supplied gray, blue, and white palette. Dark gray headers and footers display the supplied transparent horizontal logo. Blue buttons, links, and accent rules pair with white content surfaces and pale gray backgrounds. Uploaded logo files are used without altering their pixels. The team portraits remain circular SVG assets. The site remains HTML5 and CSS only.
