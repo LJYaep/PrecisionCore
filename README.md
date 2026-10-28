@@ -1,6 +1,6 @@
 # PrecisionCore website
 
-A responsive, four-page website based on the approved PrecisionCore wireframe. Written exclusively in HTML5, CSS, and local SVG and JPEG image assets. No JavaScript, build tools, dependencies, external fonts, or installation required.
+A responsive, four-page website based on the approved PrecisionCore wireframe. Written exclusively in HTML5, CSS, and local SVG, JPEG, and WebP image assets. No JavaScript, build tools, dependencies, external fonts, or installation required.
 
 ## Open the website
 
@@ -52,3 +52,11 @@ Product cards represent supplied component categories and application areas, not
 ## Brand theme
 
 The theme follows the supplied gray, blue, and white palette. Dark gray headers and footers display the supplied transparent horizontal logo. Blue buttons, links, and accent rules pair with white content surfaces and pale gray backgrounds. Uploaded logo files are used without altering their pixels. The team portraits remain circular SVG assets. The site remains HTML5 and CSS only.
+
+## Generated website media
+
+Six AI-generated WebP images replace the product-category placeholders. The Home page has a approximately seven-second silicon wafer inspection film, and Products has a approximately seven-second industrial sensor film. Videos use native HTML controls with poster images and do not autoplay. They are streamed from their supplied HeyGen hosted playback URLs; the images are stored in this repository. Playback depends on those external URLs remaining accessible. The generated scenes are illustrative and do not document actual PrecisionCore products or facilities. No imagery or footage was copied from the reference websites.
+
+References for subject direction: https://www.a-star.edu.sg/ime and https://continental.sg/ .
+
+Additional CSS applies user-select restrictions to all descendants; versioned stylesheet links refresh cached styles. HTML/CSS can discourage ordinary selection and dragging but cannot enforce complete copy protection.

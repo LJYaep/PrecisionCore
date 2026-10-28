@@ -186,3 +186,41 @@ img, svg {
 }
 img { pointer-events: none; }
 a { -webkit-user-drag: none; }
+
+/* Editorial imagery and accessible, user-controlled films. */
+.hero-media { overflow: hidden; border-radius: 12px; background: #ffffff; border: 1px solid #d5e2ef; box-shadow: 0 24px 60px #1f456f16; }
+.hero-art.hero-media > img, .hero-art.hero-media > video { width: 100%; height: auto; max-height: none; aspect-ratio: 3/2; object-fit: cover; display: block; }
+.hero-art.hero-media > video { aspect-ratio: 16/9; background: #152c43; }
+.hero-art.hero-media figcaption { margin: 0; padding: 14px 12px; font-size: 10px; letter-spacing: .6px; color: #42617f; }
+.editorial-video { display: block; width: 100%; aspect-ratio: 16/9; height: auto; background: #152c43; border-radius: 8px; }
+.hero-media .editorial-video { border-radius: 0; }
+.product-image { height: auto; aspect-ratio: 3/2; display: block; border: 0; border-radius: 8px; }
+.product-image .editorial-image { width: 100%; height: 100%; object-fit: cover; }
+.about-feature { margin: -16px 0 42px; }
+.about-feature .editorial-image { width: 100%; height: clamp(210px, 27vw, 360px); object-fit: cover; object-position: center 52%; border-radius: 10px; }
+.about-feature figcaption, .media-story figcaption, .product-film figcaption { font-size: 11px; color: #62768c; margin-top: 10px; }
+.media-story { background: #f4f7fb; }
+.media-story-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 65px; align-items: center; }
+.media-story-grid .editorial-image { width: 100%; height: auto; border-radius: 10px; }
+.media-story-grid h2 { margin-bottom: 24px; }
+.product-film { display: grid; grid-template-columns: .85fr 1.2fr; gap: 60px; align-items: center; border-top: 1px solid var(--line); margin-top: 48px; padding-top: 48px; }
+.product-film h2 { font-size: 29px; margin-bottom: 20px; }
+.media-disclosure { font-size: 11px; margin-top: 20px; color: #62768c; }
+@media(max-width:700px) {
+  .hero-art.hero-media { width: 100%; max-width: 360px; margin-top: 22px; }
+  .hero-art.hero-media > img, .hero-art.hero-media > video { max-height: none; }
+  .hero-art.hero-media figcaption { font-size: 8px; padding: 10px; }
+  .media-story-grid, .product-film { grid-template-columns: 1fr; gap: 30px; }
+  .about-feature { margin: 0 0 32px; }
+  .product-film { margin-top: 35px; padding-top: 35px; }
+}
+/* Apply selection restrictions to every descendant explicitly. */
+html, body, body *, body *::before, body *::after {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  -webkit-touch-callout: none !important;
+}
+body *::selection { background: transparent !important; color: inherit !important; }
+body img, body svg, body a { -webkit-user-drag: none !important; }
