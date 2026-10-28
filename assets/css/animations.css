@@ -1,0 +1,125 @@
+/* PrecisionCore motion system — CSS only, with reduced-motion fallback. */
+:root {
+  --motion-ease: cubic-bezier(.22, 1, .36, 1);
+  --motion-fast: 220ms;
+  --motion-enter: 700ms;
+}
+@keyframes pc-enter {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pc-emblem-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(1deg); }
+}
+@keyframes pc-scroll-cue {
+  0%, 60%, 100% { transform: translateY(0); }
+  30% { transform: translateY(5px); }
+}
+@keyframes pc-hero-light {
+  from { transform: translateX(-14%) rotate(-12deg); opacity: .18; }
+  to { transform: translateX(14%) rotate(12deg); opacity: .48; }
+}
+/* Entrance motion completes quickly and never delays access to controls. */
+.page-heading,
+.hero-copy > .eyebrow {
+  animation: pc-enter var(--motion-enter) var(--motion-ease) both;
+}
+.hero-copy h1 { animation: pc-enter var(--motion-enter) var(--motion-ease) 80ms both; }
+.hero-description { animation: pc-enter var(--motion-enter) var(--motion-ease) 160ms both; }
+.hero-copy .button-row { animation: pc-enter var(--motion-enter) var(--motion-ease) 240ms both; }
+.hero-art { animation: pc-enter 900ms var(--motion-ease) 120ms both; }
+.hero-art .hero-emblem { animation: pc-emblem-float 7s ease-in-out 1s infinite; }
+.scroll-prompt span { animation: pc-scroll-cue 2.8s ease-in-out 4; }
+/* The light remains decorative, below content and outside the hit-testing path. */
+.hero { position: relative; isolation: isolate; overflow: hidden; }
+.hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 5% -15%;
+  background: radial-gradient(ellipse at 70% 40%, #7eb9ff55 0%, transparent 55%);
+  pointer-events: none;
+  animation: pc-hero-light 12s ease-in-out infinite alternate;
+}
+.button {
+  transition: transform var(--motion-fast) var(--motion-ease),
+    background-color var(--motion-fast) ease,
+    border-color var(--motion-fast) ease,
+    box-shadow var(--motion-fast) ease;
+}
+.button span, .text-link span {
+  display: inline-block;
+  transition: transform var(--motion-fast) var(--motion-ease);
+}
+.button:hover, .button:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px #0759ae20;
+}
+.button:hover span, .button:focus-visible span { transform: translateX(4px); }
+.button:active { transform: translateY(0); box-shadow: none; }
+.text-link:hover span { transform: translate(2px, -2px); }
+.site-header nav a,
+.site-footer nav a,
+.social-links a,
+.slide-arrow {
+  transition: color var(--motion-fast) ease,
+    background-color var(--motion-fast) ease,
+    border-color var(--motion-fast) ease,
+    transform var(--motion-fast) var(--motion-ease);
+}
+.social-links a:hover, .social-links a:focus-visible { transform: translateY(-3px); }
+.slide-arrow:hover { transform: scale(1.08); }
+.slide-choice { transition: background-color 180ms ease, box-shadow 180ms ease; }
+.slide-choice:checked { box-shadow: 0 0 0 4px #0873df18; }
+.purpose-card, .team-member, .product-card, .application-grid article {
+  transition: transform 300ms var(--motion-ease),
+    box-shadow 300ms ease,
+    border-color 300ms ease;
+}
+.product-image { transition: border-color 300ms ease, background-color 300ms ease; }
+.product-image img {
+  transition: transform 550ms var(--motion-ease);
+}
+input, textarea, select {
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+input:focus, textarea:focus, select:focus {
+  box-shadow: 0 0 0 3px #0873df12;
+}
+/* Hover effects are reserved for devices with an actual pointer. */
+@media(hover: hover) and (pointer: fine) {
+  .purpose-card:hover, .team-member:hover {
+    transform: translateY(-6px);
+    border-color: #a6c9ee;
+    box-shadow: 0 14px 28px #203c5b0d;
+  }
+  .product-card:hover { transform: translateY(-5px); }
+  .product-card:hover .product-image { border-color: #79afe9; }
+  .product-card:hover .product-image img { transform: scale(1.06); }
+  .application-grid article:hover { transform: translateY(-4px); border-color: #0873df; }
+}
+/* Scroll-driven reveals progressively enhance browsers that support view timelines.
+   On older browsers these sections are immediately visible. */
+@supports (animation-timeline: view()) {
+  @media(prefers-reduced-motion: no-preference) {
+    .purpose-grid, .team-grid, .product-grid, .application-grid,
+    .service-section, .contact-layout, .intro-split {
+      animation: pc-enter 1s linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 22%;
+    }
+  }
+}
+/* All content stays visible without motion when this preference is enabled. */
+@media(prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+  .hero::before { opacity: .2; }
+}
+@media print {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
