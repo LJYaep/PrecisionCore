@@ -9,3 +9,13 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 @media(forced-colors:active){.slide-choice{appearance:auto}.button{border:1px solid ButtonText}.social-links a{border:1px solid LinkText}}
 @media print{.site-header,.site-footer{position:static}.slide-arrow,.slide-choice,.scroll-prompt{display:none}.carousel,.slides,.slide{min-height:0}.slide{padding:20px 0}.hero-inner{padding:20px 0;width:100%}.button{color:#000;background:#fff}.section{padding:25px 0}.container{width:100%}.product-card,.purpose-card,.team-member{break-inside:avoid}}
+
+/* Uploaded About Us portraits; original image files are preserved. */
+.team-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:30px}
+.team-member .team-photo{width:200px;height:200px;max-width:100%;aspect-ratio:1;border-radius:50%;object-fit:cover;border:1px solid var(--line);background:var(--pale)}
+.team-photo-1{object-position:50% 35%}
+.team-photo-2{object-position:50% 35%}
+.team-photo-3{object-position:56% 25%}
+.team-photo-4{object-position:50% 25%}
+@media(max-width:950px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 24px}}
+@media(max-width:480px){.team-grid{grid-template-columns:1fr}}

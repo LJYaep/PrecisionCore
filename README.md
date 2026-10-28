@@ -1,6 +1,6 @@
 # PrecisionCore website
 
-A responsive, four-page website based on the approved PrecisionCore wireframe. Written exclusively in HTML5, CSS, and local SVG image assets. No JavaScript, build tools, dependencies, external fonts, or installation required.
+A responsive, four-page website based on the approved PrecisionCore wireframe. Written exclusively in HTML5, CSS, and local SVG and JPEG image assets. No JavaScript, build tools, dependencies, external fonts, or installation required.
 
 ## Open the website
 
@@ -9,19 +9,20 @@ Extract the ZIP, then open `precisioncore-website/index.html` in any modern brow
 ## Files
 
 - `index.html` — full-screen hero, CSS-only carousel, scroll cue, company introduction.
-- `about.html` — company overview, mission, vision, main goal, team placeholders.
+- `about.html` — company overview, mission, vision, main goal, four uploaded team portraits with name and role placeholders.
 - `products.html` — six component/application cards and reliability section.
 - `contact.html` — contact placeholders and a demo enquiry form.
 - `assets/css/styles.css` — shared responsive layout, carousel, form, mobile and print styles.
 - `assets/images/logo-mark.svg` — provisional editable chip logo.
 - `assets/images/integrated-circuit.svg` — original component illustration.
 - `assets/images/sensor.svg` — original sensor illustration.
-- `assets/images/team-placeholder.svg` — generic team portrait placeholder.
+- `assets/images/team-member-01.jpg` through `team-member-04.jpg` — four uploaded team photographs, in upload order.
+- `assets/images/team-placeholder.svg` — optional generic fallback portrait.
 - `README.md` — these instructions.
 
 ## Editing
 
-All four pages contain the same header and footer HTML. Update both in every HTML file to keep them consistent. Colours, spacing, and container width are defined as variables at the top of the stylesheet. Replace the provisional logo, team details, contact details, and illustrations when final assets are available.
+All four pages contain the same header and footer HTML. Update both in every HTML file to keep them consistent. Colours, spacing, and container width are defined as variables at the top of the stylesheet. Replace the provisional logo, team names and roles, contact details, and illustrations when final assets are available. Uploaded photographs use circular CSS crops; edit the `.team-photo-1` through `.team-photo-4` object-position rules to adjust framing. Original photo files are preserved.
 
 The three social icons currently link to the LinkedIn, Facebook, and Instagram homepages. Replace their URLs with PrecisionCore's actual social profiles; their accessible labels identify them as placeholder links.
 
