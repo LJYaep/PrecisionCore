@@ -16,13 +16,14 @@ Extract the ZIP, then open `precisioncore-website/index.html` in any modern brow
 - `assets/images/logo-mark.svg` — provisional editable chip logo.
 - `assets/images/integrated-circuit.svg` — original component illustration.
 - `assets/images/sensor.svg` — original sensor illustration.
+- `assets/images/team-member-01-circle.svg` through `team-member-04-circle.svg` — circular portrait assets used on About Us.
 - `assets/images/team-member-01.jpg` through `team-member-04.jpg` — four uploaded team photographs, in upload order.
 - `assets/images/team-placeholder.svg` — optional generic fallback portrait.
 - `README.md` — these instructions.
 
 ## Editing
 
-All four pages contain the same header and footer HTML. Update both in every HTML file to keep them consistent. Colours, spacing, and container width are defined as variables at the top of the stylesheet. Replace the provisional logo, team names and roles, contact details, and illustrations when final assets are available. Uploaded photographs use circular CSS crops; edit the `.team-photo-1` through `.team-photo-4` object-position rules to adjust framing. Original photo files are preserved.
+All four pages contain the same header and footer HTML. Update both in every HTML file to keep them consistent. Colours, spacing, and container width are defined as variables at the top of the stylesheet. Replace the provisional logo, team names and roles, contact details, and illustrations when final assets are available. Portraits use self-contained circular SVG image assets with transparent corners and embedded original photographs. The circle is clipped inside each SVG, independently of CSS. Original JPEG files are preserved.
 
 The three social icons currently link to the LinkedIn, Facebook, and Instagram homepages. Replace their URLs with PrecisionCore's actual social profiles; their accessible labels identify them as placeholder links.
 

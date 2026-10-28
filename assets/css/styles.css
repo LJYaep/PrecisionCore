@@ -12,10 +12,6 @@
 
 /* Uploaded About Us portraits; original image files are preserved. */
 .team-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:30px}
-.team-member .team-photo{width:200px;height:200px;max-width:100%;aspect-ratio:1;border-radius:50%;object-fit:cover;border:1px solid var(--line);background:var(--pale)}
-.team-photo-1{object-position:50% 35%}
-.team-photo-2{object-position:50% 35%}
-.team-photo-3{object-position:56% 25%}
-.team-photo-4{object-position:50% 25%}
+.team-member .team-photo{width:200px;height:200px;max-width:100%;aspect-ratio:1;border-radius:0;object-fit:contain;border:0;background:transparent}
 @media(max-width:950px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 24px}}
 @media(max-width:480px){.team-grid{grid-template-columns:1fr}}
