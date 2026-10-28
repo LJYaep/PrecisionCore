@@ -170,3 +170,19 @@ input:focus, select:focus, textarea:focus { border-color: var(--blue); }
 @media(max-width:480px) {
   .team-member { padding: 30px 24px; }
 }
+
+/* Disable ordinary page selection and native image/link dragging. */
+html, body {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+*::selection { background: transparent; color: inherit; }
+img, svg {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+}
+img { pointer-events: none; }
+a { -webkit-user-drag: none; }
