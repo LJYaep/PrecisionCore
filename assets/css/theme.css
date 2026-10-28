@@ -224,3 +224,26 @@ html, body, body *, body *::before, body *::after {
 }
 body *::selection { background: transparent !important; color: inherit !important; }
 body img, body svg, body a { -webkit-user-drag: none !important; }
+
+/* Visible fictional-company notice shared across every page. */
+.site-disclaimer {
+  width: min(1380px, calc(100% - 64px));
+  margin: 26px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid #536173;
+  color: #eef3f9;
+  font-size: 12px;
+  line-height: 1.75;
+}
+.site-disclaimer strong { display: block; margin-bottom: 5px; font-size: 12px; }
+.site-footer .site-disclaimer p { margin: 0; color: #c7d2df; font-size: 12px; max-width: 1100px; }
+.contact-disclaimer {
+  margin-top: 18px;
+  padding: 12px 14px;
+  border-left: 3px solid #0873df;
+  background: #edf4fc;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #365571;
+}
+@media(max-width:700px) { .site-disclaimer { width: calc(100% - 48px); } }
